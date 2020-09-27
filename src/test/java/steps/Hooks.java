@@ -37,7 +37,7 @@ public class Hooks extends BaseUtil {
             }
             driver.manage().timeouts().implicitlyWait(Constant.PagesHelperConstants.TIME, TimeUnit.SECONDS);
             driver.manage().window().maximize();
-            driver.get("https://sc-staging.vegrow.in/login");
+            driver.get("https://accounts.google.com/");
             beforeFlag = true;
         }
 

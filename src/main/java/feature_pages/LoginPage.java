@@ -13,26 +13,17 @@ public class LoginPage extends BaseUtil {
         PageFactory.initElements(driver, this);
     }
 
-    @FindBy(xpath = "//input[@name='username']")
+    @FindBy(xpath = "")
     @CacheLookup
     WebElement userName;
 
-    @FindBy(xpath = "//input[@name='password']")
+    @FindBy(xpath = "")
     @CacheLookup
     WebElement passWord;
 
-    @FindBy(xpath = "//span[contains(text(),'Login')]")
+    @FindBy(xpath = "")
     @CacheLookup
     WebElement loginButton;
-
-    @FindBy(xpath = "//h1[contains(text(),'Supply Chain')]")
-    @CacheLookup
-    WebElement verifyHomePage;
-
-    @FindBy(xpath = "//html//body//div//div//div//header//div//div//*[local-name()='svg']")
-    @CacheLookup
-    WebElement user;
-
 
     public void setUserName(String setUName) {
         PagesHelper.clearText(userName);
@@ -48,9 +39,6 @@ public class LoginPage extends BaseUtil {
         PagesHelper.click(loginButton);
     }
 
-    public boolean verifyLogo() {
-        return PagesHelper.isDisplayed(verifyHomePage);
-    }
 
 }
 
